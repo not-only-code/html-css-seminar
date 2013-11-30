@@ -38,7 +38,7 @@
 			<div class="slides">
 				<section id="title">
 					<h1>HTML/CSS</h1>
-					<h3>Seminario de maquetación: básico</h3>
+					<h3>Seminario de maquetación: avanzado</h3>
 					<p>
 						<small>by <a href="http://codingsomething.wordpress.com">Carlos Sanz García</a> / <a href="http://twitter.com/carlos_a_sanz">@carlos_a_sanz</a></small>
 					</p>
@@ -49,242 +49,221 @@
 					<img src="images/author.png">
 					<p class="fragment">Me llamo Carlos Sanz García</p>
 					<p class="fragment">Soy un desarrollador Front más</p>
-					<p class="fragment">Actualmente trabajo en <a href="http://typeform.com">Typeform</a>.</p>
+					<small class="fragment"><a href="http://codingsomething.wordpress.com">codingsomething.wordpress.com</a> | <a href="http://twitter.com/carlos_a_sanz">@carlos_a_sanz</a> | <a href="https://github.com/not-only-code">github.com/not-only-code</a></small>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section id="contents">
 					<section>
 						<h2>Contenidos</h2>
-						<p>Este seminario es una adaptación oral de <a href="http://learn.shayhowe.com/">A Beginner’s Guide to HTML & CSS</a>, escrito por <a href="https://twitter.com/shayhowe">@shayhowe</a>.</p>
+						<p>Este seminario es una adaptación oral de <a href="http://learn.shayhowe.com/">An Advanced Guide to HTML & CSS</a>, escrito por <a href="https://twitter.com/shayhowe">@shayhowe</a>.</p>
 					</section>
 					<section>
-						<h2>1. Introducción y conceptos básicos</h2>
-						<p>Terminología y sintaxis. Qué es HTML, y qué es CSS?</p>
+						<h2>1. Repaso del anterior Seminario</h2>
 					</section>
 					<section>
-						<h2>2. Elementos y semántica</h2>
-						<p>Que és la semantica?</p>
-						<p>La importancia del flujo: elementos de bloque y elementos en línea, enlaces...</p>
+						<h2>2. Organización y estrategia</h2>
+						<p>Arquitectura, OOCSS, SMACSS</p>
 					</section>
 					<section>
-						<h2>3. Modelo de caja y posicionamiento</h2>
-						<p>HTML: Las cajas</p>
-						<p>CSS: tamaños, margins, paddings, borders, flotados, posicionamiento absoluto, relativo </p>
+						<h2>3. Selectores</h2>
+						<p>Jerarquía, complejidad, pseudo-clases</p>
 					</section>
 					<section>
-						<h2>4. Tipografía</h2>
-						<p>HTML: Tipos de texto, cabeceras, párrafos, negritas</p>
-						<p>CSS: Propiedades de las fuentes: weight, size, line-height...</p>
+						<h2>4. Posicionamiento</h2>
+						<p>Flotados, propiedad position, z-index</p>
 					</section>
 					<section>
-						<h2>5. Backgrounds y gradientes</h2>
-						<p>CSS: Colores, imágenes de fondo y posicionamiento, gradientes.</p>
+						<h2>5. Responsive</h2>
+						<p>Introducción, layouts flexibles, media queries, 'mobile first'</p>
 					</section>
 					<section>
-						<h2>6. Listados</h2>
-						<p>HTML: listados ordenados, desordenados, de definición</p>
-						<p>CSS: cómo dar estilo a listados, maquetación de menús</p>
+						<h2>6. Preprocesadores</h2>
+						<p>SCSS SASS / LESS, sintaxis, variables, compilación, etc</p>
 					</section>
 					<section>
-						<h2>7. Media: imágenes, audio y vídeo</h2>
-						<p>HTML: imagenes, audio, video, captions</p>
+						<h2>7. Javascript</h2>
+						<p>Intro, Jquery, Eventos</p>
 					</section>
 					<section>
-						<h2>8. Formularios</h2>
-						<p>HTML: textfields, textareas, radios, checkboxes, submits...</p>
+						<h2>8. Transformaciones</h2>
+						<p>Sintaxis, 2D, combinaciones, 3D</p>
 					</section>
 					<section>
-						<h2>9. Tablas</h2>
-						<p>HTML: estructura</p>
-						<p>CSS: celdas, alineamiento, espaciados</p>
+						<h2>9. Transiciones y animaciones</h2>
+						<p>Transiciones, animaciones</p>
 					</section>
 					<section>
-						<h2>10. Good practices</h2>
-						<p>HTML: buen uso de la semántica, selectores</p>
-						<p>CSS: organizar el código, no te repitas (d.r.y)</p>
+						<h2>10. Semántica y escalabilidad</h2>
+						<p>Estructura, contenido, microdata, WAI-ARIA</p>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>1. INTRODUCCIÓN Y CONCEPTOS BÁSICOS</h2>
-					</section>
-					<section>
-						<h3 class="fragment">HTML</h3>
-						<p class="fragment">Es un lenguaje de marcado/etiquetado</p>
-						<p class="fragment">está orientado al contenido</p>
-						<p>&nbsp;</p>
-						<h3 class="fragment">CSS</h3>
-						<p class="fragment">es un lenguaje de presentación</p>
-						<p class="fragment">determina la apariencia</p>
-					</section>
-					<section>
-						<h3>HTML</h3>
-						<p>&nbsp;</p>
-						<p>Etiquetas</p>
-						<pre><code data-trim contenteditable>
-							<a></a>
-						</code></pre>
-						<p>Atributos</p>
-						<pre><code data-trim contenteditable>
-							<a href></a>
-						</code></pre>
-						<p>Valores</p>
-						<pre><code data-trim contenteditable>
-							<a href="http://google.com"></a>
-						</code></pre>
-					</section>
-					<section data-markdown>
-							<script type="text/template">
-							estructura de un documento  
-```
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Hello World</title>
-	</head>
-	<body>
-		<h1>Hello World</h1>
-		<p>This is a website.</p>
-	</body>
-</html>
-```
-					</script>
-
-						</code></pre>
-					</section>
-					<section>
-						<h3>CSS</h3>
-						<p>&nbsp;</p>
-						<p>Selectores</p>
-						<pre><code data-trim contenteditable>
-							p {...}
-						</code></pre>
-						<p>Propiedades</p>
-						<pre><code data-trim contenteditable>
-p {
-	color: ...;
-	font-size: ...;
-}
-						</code></pre>
-						<p>Valores</p>
-						<pre><code data-trim contenteditable>
-p {
-	color: #f00;
-	font-size: 14px;
-}
-						</code></pre>
-					</section>
-					<section>
-						<p>Terminología completa o abreviada</p>
-						<pre><code data-trim contenteditable>
-/* Completa */
-p {
-	padding-top: 10px;
-	padding-right: 20px;
-	padding-bottom: 10px;
-	padding-left: 20px;
-}
-/* Abreviada */
-p {
-	padding: 10px 20px;
-}
-/* Más abreviada */
-p {
-	padding: 10px;
-}
-						</code></pre>
+						<h3>1. Repaso del anterior Seminario</h3>
+						<ol>
+							<li class="fragment">Introducción y conceptos básicos</li>
+							<li class="fragment">Elementos y semántica</li>
+							<li class="fragment">Modelo de caja y posicionamiento</li>
+							<li class="fragment">Textos y tipografía</li>
+							<li class="fragment">Backgrounds y gradientes</li>
+							<li class="fragment">Listados</li>
+							<li class="fragment">Media: imágenes, audio y vídeo</li>
+							<li class="fragment">Formularios</li>
+							<li class="fragment">Tablas</li>
+							<li class="fragment">Good practices</li>
+						</ol>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>2. Elementos y semántica</h2>
+						<h3>2. Organización y estrategia</h3>
 						<p>&nbsp;</p>
-						<h3>Semántica</h3>
-						<p>&nbsp;</p>
-						<blockquote>Semantics within HTML is the practice of giving content on the page meaning and structure.</blockquote>
+						<p>Es bueno seguir unas <a href="http://developer.yahoo.com/performance/rules.html">pautas de rendimiento</a> (<a href="http://stevesouders.com/hpws/rules.php">reglas de oro</a>)</p>
+						<p>Una buena organización hace tu aplicación más escalable.</p>
+						<p>Trabajar el concepto de "modularidad".</p>
 					</section>
 					<section>
-						<h3>Elementos de bloque vs elementos de línea</h3>
-						<p>&nbsp;</p>
-						<h4 class="fragment">de bloque</h4>
-						<p class="fragment">div, section, header, table...</p>
-						<p>&nbsp;</p>
-						<h4 class="fragment">de linea</h4>
-						<p class="fragment">span, a, strong, em...</p>
-					</section>
-					<section>
-						<h3>div y span</h3>
-						<p>&nbsp;</p>
-						<p>son elementos vacíos sin semántica ni estilos predefinidos</p>
-<pre><code data-trim contenteditable>
-<!-- div es un elemento de bloque -->
-<div></div>
-
-<!-- div es un elemento de línea -->
-<span></span>
+						<h4>Arquitectura de los estilos</h4>
+						<pre class="large"><code data-trim contenteditable>
+# Base
+  – normalize.css
+  – layout.css
+  – typography.css
+# Components
+  – alerts.css
+  – buttons.css
+  – forms.css
+  – list.css
+  – nav.css
+  – tables.css
+# Modules
+  – aside.css
+  – footer.css
+  – header.css
 						</code></pre>
+					</section>
+					<section>
+						<h4>OOCSS (Object Oriented CSS)</h4>
 						<p>&nbsp;</p>
-						<blockquote>
-							Todos los navegadores llevan unos estilos predeterminados de fábrica.
-						</blockquote>
+						<p>Autor - <a href="http://oocss.org/">Nicole Sullivan</a></p>
+						<ul>
+							<li>Separar estructura de presentacion</li>
+							<li>Separar contenido del contenedor</li>
+						</ul>
 						<p>&nbsp;</p>
-						<blockquote>Para eliminar todos los estilos existen los <a href="http://meyerweb.com/eric/tools/css/reset/">reset</a> y <a href="http://necolas.github.io/normalize.css/">normalize</a>.</blockquote>
+						<pre class="large"><code data-trim contenteditable>
+<div class="alert alert-error">
+  <p class="msg">...</p>
+</div>
+						</code></pre>
+					</section>
+					<section>
+						<h4>SMACSS (Scalable and Modular Arquitecture for CSS) </h4>
+						<p>Autor - <a href="http://smacss.com/">Jonathan Snook</a></p>
+						<p>Propone estructurar los estilos en 5 bloques</p>
+						<ul>
+							<li>Base</li>
+							<li>Layout</li>
+							<li>Module</li>
+							<li>State</li>
+							<li>Theme</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Minificación y compresión</h4>
+						<p>Combina tus hojas de estilo en un solo archivo</p>
+						<p>Minifícala</p>
+						<p>Usa image sprites para tus iconos</p>
+						<p>Usa DATA uri</p>
+						<pre class="large"><code data-trim contenteditable>
+<img height="100" width="660" alt="Rigged Pattern" 
+  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA
+    +m62AAAAPUlEQVQYV2NkQAN9x+z/F1kdZEQXRxGAKcKmGK4QXRKdD1aIyzpkcUZcimB
+    uhMljOBrdEzAbiVIIUky0QgBkMCabd5DVAwAAAABJRU5ErkJggg==">
+						</code></pre>
+						<pre class="large"><code data-trim contenteditable>
+						div {
+  background: url("data:image/png;base64,.....") repeat;
+}
+						</code></pre>
+						<p>Usa caches</p>
+						<pre class="large"><code data-trim contenteditable>
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+						</code></pre>
+						
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>3. Modelo de caja y posicionamiento</h2>
+						<h3>3. Selectores</h3>
+						<p>&nbsp;</p>
+						<h4>prioridad</h4>
+						<pre class="large"><code data-trim contenteditable>
+h1 {} /* tag */
+.title {} /* clase: más específico */
+#header {} /* id: más específico aun */
+						</code></pre>
 					</section>
 					<section>
-						<h3>Unidades de medida</h3>
+						<h4>Selectores descendientes</h4>
 						<p>&nbsp;</p>
-						<h4 class="fragment">Absolutas</h4>
-						<table class="fragment table">
-							<tr>
-								<td>px</td>
-								<td>píxeles</td>
-							</tr>
-							<tr>
-								<td>pt</td>
-								<td>puntos</td>
-							</tr>
-							<tr>
-								<td>in</td>
-								<td>pulgadas</td>
-							</tr>
-							<tr>
-								<td>cm</td>
-								<td>centímetros</td>
-							</tr>
-							<tr>
-								<td>mm</td>
-								<td>milímetros</td>
-							</tr>
-						</table>
-						<p>&nbsp;</p>
-						<h4 class="fragment">Relativas</h4>
-							<table class="fragment table">
-								<tr>
-									<td>%</td>
-									<td>porcentuales</td>
-								</tr>
-								<tr>
-									<td>em</td>
-									<td>relativas al tamaño de fuente</td>
-								</tr>
-						</table>
+						<p>aumenta la especificabilidad</p>
+						<pre><code data-trim contenteditable>
+<h2>...</h2>
+<article>
+  <h2>...</h2>
+  <div>
+    <h2>...</h2>
+  </div>
+</article>
+						</code></pre>
+						<pre><code data-trim contenteditable>
+article h2 {}
+article > h2 {}
+						</code></pre>
 					</section>
 					<section>
-						<h3>El modelo de caja</h3>
+						<h4>Selectores adyacentes</h4>
 						<p>&nbsp;</p>
-						<blockquote>Todo elemento de una es una caja rectangular.</blockquote>
+						<pre><code data-trim contenteditable>
+h2 ~ p {}
+h2 + p {}
+						</code></pre>
 						<p>&nbsp;</p>
-						<img src="images/box-model.png" alt="Modelo de caja">
+						<pre><code data-trim contenteditable>
+<p>...</p>
+<article>
+  <p>...</p>
+  <h2>...</h2>
+  <p>...</p>
+  <div>
+    <p>...</p>
+  </div>
+  <p>...</p>
+</article>
+						</code></pre>
+					</section>
+					<section>
+						<h4>Selectores de atributo</h4>
+						<p>&nbsp;</p>
+						<pre><code data-trim contenteditable>
+<a href="http://google.com/" target="_blank" rel="tag nofollow" lang="en-US">...</a>
+						</code></pre>
+						<p>&nbsp;</p>
+						<pre><code data-trim contenteditable>
+a[target] {}
+a[href="http://google.com/"] {}
+a[href*="google"] {}
+a[href$=".pdf"] {}
+a[rel~="tag"] {}
+a[lang|="en"]
+						</code></pre>
+						<p>&nbsp;</p>
 					</section>
 					<section>
 						<h3>Unidades de posicionamiento</h3>
