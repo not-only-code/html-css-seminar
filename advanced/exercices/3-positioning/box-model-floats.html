@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>box model</title>
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.13.0/build/cssreset/cssreset-min.css">
+		<style>
+			header {
+				height: 100px;
+				background: #eaeaea;
+			}
+			
+			section {
+				position: relative;
+				background: yellow;
+			}
+
+			aside {
+				width: 30%;
+				height: 250px;
+				float: left;
+				background: orange;
+			}
+			
+			article {
+				float: right;
+				width: 70%;
+				height: 190px;
+				background: red;
+			}
+
+			footer {
+				background: #ddd;
+				height: 90px;
+				clear: both;
+			}
+
+		</style>
+	</head>
+	<body>
+		<header>HEADER</header>
+		<section>
+			<aside>SIDEBAR</aside>	
+			<article>ARTICLE CONTENT</article>
+		</section>
+		<footer>FOOTER</footer>
+	</body>
+</html>

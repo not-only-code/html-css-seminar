@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Seminario de maquetación: básico</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section id="title">
+					<h1>HTML/CSS</h1>
+					<h3>Seminario de maquetación: básico</h3>
+					<p>
+						<small>by <a href="http://codingsomething.wordpress.com">Carlos Sanz García</a> / <a href="http://twitter.com/carlos_a_sanz">@carlos_a_sanz</a></small>
+					</p>
+				</section>
+
+				<section id="author">
+					<h3>Y tu quien eres?</h3>
+					<img src="images/author.png">
+					<p class="fragment">Me llamo Carlos Sanz García</p>
+					<p class="fragment">Soy un desarrollador Front más</p>
+					<p class="fragment">Actualmente trabajo en <a href="http://typeform.com">Typeform</a>.</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section id="contents">
+					<section>
+						<h2>Contenidos</h2>
+						<p>Este seminario es una adaptación oral de <a href="http://learn.shayhowe.com/">A Beginner’s Guide to HTML & CSS</a>, escrito por <a href="https://twitter.com/shayhowe">@shayhowe</a>.</p>
+					</section>
+					<section>
+						<h2>1. Introducción y conceptos básicos</h2>
+						<p>Terminología y sintaxis. Qué es HTML, y qué es CSS?</p>
+					</section>
+					<section>
+						<h2>2. Elementos y semántica</h2>
+						<p>Que és la semantica?</p>
+						<p>La importancia del flujo: elementos de bloque y elementos en línea, enlaces...</p>
+					</section>
+					<section>
+						<h2>3. Modelo de caja y posicionamiento</h2>
+						<p>HTML: Las cajas</p>
+						<p>CSS: tamaños, margins, paddings, borders, flotados, posicionamiento absoluto, relativo </p>
+					</section>
+					<section>
+						<h2>4. Tipografía</h2>
+						<p>HTML: Tipos de texto, cabeceras, párrafos, negritas</p>
+						<p>CSS: Propiedades de las fuentes: weight, size, line-height...</p>
+					</section>
+					<section>
+						<h2>5. Backgrounds y gradientes</h2>
+						<p>CSS: Colores, imágenes de fondo y posicionamiento, gradientes.</p>
+					</section>
+					<section>
+						<h2>6. Listados</h2>
+						<p>HTML: listados ordenados, desordenados, de definición</p>
+						<p>CSS: cómo dar estilo a listados, maquetación de menús</p>
+					</section>
+					<section>
+						<h2>7. Media: imágenes, audio y vídeo</h2>
+						<p>HTML: imagenes, audio, video, captions</p>
+					</section>
+					<section>
+						<h2>8. Formularios</h2>
+						<p>HTML: textfields, textareas, radios, checkboxes, submits...</p>
+					</section>
+					<section>
+						<h2>9. Tablas</h2>
+						<p>HTML: estructura</p>
+						<p>CSS: celdas, alineamiento, espaciados</p>
+					</section>
+					<section>
+						<h2>10. Good practices</h2>
+						<p>HTML: buen uso de la semántica, selectores</p>
+						<p>CSS: organizar el código, no te repitas (d.r.y)</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>1. INTRODUCCIÓN Y CONCEPTOS BÁSICOS</h2>
+					</section>
+					<section>
+						<h3 class="fragment">HTML</h3>
+						<p class="fragment">Es un lenguaje de marcado/etiquetado</p>
+						<p class="fragment">está orientado al contenido</p>
+						<p>&nbsp;</p>
+						<h3 class="fragment">CSS</h3>
+						<p class="fragment">es un lenguaje de presentación</p>
+						<p class="fragment">determina la apariencia</p>
+					</section>
+					<section>
+						<h3>HTML</h3>
+						<p>&nbsp;</p>
+						<p>Etiquetas</p>
+						<pre><code data-trim contenteditable>
+							<a></a>
+						</code></pre>
+						<p>Atributos</p>
+						<pre><code data-trim contenteditable>
+							<a href></a>
+						</code></pre>
+						<p>Valores</p>
+						<pre><code data-trim contenteditable>
+							<a href="http://google.com"></a>
+						</code></pre>
+					</section>
+					<section data-markdown>
+							<script type="text/template">
+							estructura de un documento  
+```
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Hello World</title>
+	</head>
+	<body>
+		<h1>Hello World</h1>
+		<p>This is a website.</p>
+	</body>
+</html>
+```
+					</script>
+
+						</code></pre>
+					</section>
+					<section>
+						<h3>CSS</h3>
+						<p>&nbsp;</p>
+						<p>Selectores</p>
+						<pre><code data-trim contenteditable>
+							p {...}
+						</code></pre>
+						<p>Propiedades</p>
+						<pre><code data-trim contenteditable>
+p {
+	color: ...;
+	font-size: ...;
+}
+						</code></pre>
+						<p>Valores</p>
+						<pre><code data-trim contenteditable>
+p {
+	color: #f00;
+	font-size: 14px;
+}
+						</code></pre>
+					</section>
+					<section>
+						<p>Terminología completa o abreviada</p>
+						<pre><code data-trim contenteditable>
+/* Completa */
+p {
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+/* Abreviada */
+p {
+	padding: 10px 20px;
+}
+/* Más abreviada */
+p {
+	padding: 10px;
+}
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>2. Elementos y semántica</h2>
+						<p>&nbsp;</p>
+						<h3>Semántica</h3>
+						<p>&nbsp;</p>
+						<blockquote>Semantics within HTML is the practice of giving content on the page meaning and structure.</blockquote>
+					</section>
+					<section>
+						<h3>Elementos de bloque vs elementos de línea</h3>
+						<p>&nbsp;</p>
+						<h4 class="fragment">de bloque</h4>
+						<p class="fragment">div, section, header, table...</p>
+						<p>&nbsp;</p>
+						<h4 class="fragment">de linea</h4>
+						<p class="fragment">span, a, strong, em...</p>
+					</section>
+					<section>
+						<h3>div y span</h3>
+						<p>&nbsp;</p>
+						<p>son elementos vacíos sin semántica ni estilos predefinidos</p>
+<pre><code data-trim contenteditable>
+<!-- div es un elemento de bloque -->
+<div></div>
+
+<!-- div es un elemento de línea -->
+<span></span>
+						</code></pre>
+						<p>&nbsp;</p>
+						<blockquote>
+							Todos los navegadores llevan unos estilos predeterminados de fábrica.
+						</blockquote>
+						<p>&nbsp;</p>
+						<blockquote>Para eliminar todos los estilos existen los <a href="http://meyerweb.com/eric/tools/css/reset/">reset</a> y <a href="http://necolas.github.io/normalize.css/">normalize</a>.</blockquote>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>3. Modelo de caja y posicionamiento</h2>
+					</section>
+					<section>
+						<h3>Unidades de medida</h3>
+						<p>&nbsp;</p>
+						<h4 class="fragment">Absolutas</h4>
+						<table class="fragment table">
+							<tr>
+								<td>px</td>
+								<td>píxeles</td>
+							</tr>
+							<tr>
+								<td>pt</td>
+								<td>puntos</td>
+							</tr>
+							<tr>
+								<td>in</td>
+								<td>pulgadas</td>
+							</tr>
+							<tr>
+								<td>cm</td>
+								<td>centímetros</td>
+							</tr>
+							<tr>
+								<td>mm</td>
+								<td>milímetros</td>
+							</tr>
+						</table>
+						<p>&nbsp;</p>
+						<h4 class="fragment">Relativas</h4>
+							<table class="fragment table">
+								<tr>
+									<td>%</td>
+									<td>porcentuales</td>
+								</tr>
+								<tr>
+									<td>em</td>
+									<td>relativas al tamaño de fuente</td>
+								</tr>
+						</table>
+					</section>
+					<section>
+						<h3>El modelo de caja</h3>
+						<p>&nbsp;</p>
+						<blockquote>Todo elemento de una es una caja rectangular.</blockquote>
+						<p>&nbsp;</p>
+						<img src="images/box-model.png" alt="Modelo de caja">
+					</section>
+					<section>
+						<h3>Unidades de posicionamiento</h3>
+						<p>&nbsp;</p>
+						<h4>Width y height</h4>
+						<p>Los elementos de bloque ocupan siempre el 100% de ancho.</p>
+						<p>Los elementos de línea ocupan el sólo ancho de su contenido.</p>
+						<p>&nbsp;</p>
+						<h4>Padding, border y margin</h4>
+						<p>padding: es el espacio interior entre la caja y el contenido.</p>
+						<p>margin: es el espacio exterior entre la caja y los otros elementos.</p>
+					</section>
+					<section>
+						<h4>margin y padding sintaxis</h4>
+						<pre class="large"><code data-trim contenteditable>
+/* 10px: top, right, bottom, left */
+p {
+	padding: 10px;
+}
+/* 10px: vertical(top + bottom), 20px horizontal (left + right) */
+p {
+	padding: 10px 20px;
+}
+/* 10px top, 30px right, 20px bottom, 5px left */
+p {
+	padding: 10px 30px 20px 5px;
+}
+/* 10px top, 10px right, 10px bottom, 5px left */
+p {
+	padding: 10px 10px 10px 5px;
+}
+/* usando la cascada: 10px top, 10px right, 10px bottom, 5px left */
+p {
+	padding: 10px;
+	padding-left: 5px;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h4>border sintaxis</h4>
+						<pre class="large"><code data-trim contenteditable>
+/* style, width, color */
+p {
+	border: solid 1px #ffffff;
+}
+p {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ffffff;
+}
+/* top, right, bottom, left */
+p {
+	border-top: solid 1px #ffffff;
+	border-left: dashed 2px red;
+}
+/* usando la cascada */
+p {
+	border: solid 1px #ffffff;
+	border-left: solid 2px red;
+	border-left-color: green;
+}
+				</code></pre>
+					</section>
+
+					<section>
+						<h3>Floats</h3>
+					</section>
+					
+				</section>
+
+				
+
+				<section>
+					<h2>Fantastic Ordered List</h2>
+					<ol>
+						<li>One is smaller than...</li>
+						<li>Two is smaller than...</li>
+						<li>Three!</li>
+					</ol>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Markdown support
+
+						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+
+						```
+						<section data-markdown>
+						  ## Markdown support
+
+						  For those of you who like that sort of thing.
+						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section id="transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=cube#/transitions">Cube</a> -
+						<a href="?transition=page#/transitions">Page</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a> -
+						<a href="?transition=linear#/transitions">Linear</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?#/transitions">Default</a>
+					</p>
+				</section>
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						Reveal.js comes with a few themes built in: <br>
+						<a href="?#/themes">Default</a> -
+						<a href="?theme=sky#/themes">Sky</a> -
+						<a href="?theme=beige#/themes">Beige</a> -
+						<a href="?theme=simple#/themes">Simple</a> -
+						<a href="?theme=serif#/themes">Serif</a> -
+						<a href="?theme=night#/themes">Night</a> <br>
+						<a href="?theme=moon.css#/themes">Moon</a> -
+						<a href="?theme=simple.css#/themes">Simple</a> -
+						<a href="?theme=solarized.css#/themes">Solarized</a>
+					</p>
+					<p>
+						<small>
+							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Global State</h2>
+					<p>
+						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+						will be added as a class to the document element when the slide is open. This lets you
+						apply broader style changes, like switching the background.
+					</p>
+				</section>
+
+				<section data-state="customevent">
+					<h2>Custom Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<section data-background="#007777">
+						<h2>Slide Backgrounds</h2>
+						<p>
+							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
+						</p>
+						<a href="#" class="image navigate-down">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
+						<h2>Image Backgrounds</h2>
+						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
+						<h2>Repeated Image Backgrounds</h2>
+						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					</section>
+				</section>
+
+				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+					<h2>Background Transitions</h2>
+					<p>
+						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
+					</p>
+				</section>
+
+				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+					<h2>Background Transition Override</h2>
+					<p>
+						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Fragmented Views</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<ol>
+							<li class="fragment"><code>any type</code></li>
+							<li class="fragment"><em>of view</em></li>
+							<li class="fragment"><strong>fragments</strong></li>
+						</ol>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's a few styles of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment roll-in">roll-in</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment highlight-red">highlight-red</p>
+						<p class="fragment highlight-green">highlight-green</p>
+						<p class="fragment highlight-blue">highlight-blue</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Spectacular image!</h2>
+					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
+						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
+					</a>
+				</section>
+
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
+					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+					<script>
+						document.getElementById('slideshare').attributeName = 'allowfullscreen';
+					</script>
+				</section>
+
+				<section>
+					<h2>Take a Moment</h2>
+					<p>
+						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
+						during a presentation.
+					</p>
+				</section>
+
+				<section>
+					<h2>Stellar Links</h2>
+					<ul>
+						<li><a href="http://slid.es">Try the online editor</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
+						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+					<h3>BY Hakim El Hattab / hakim.se</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
