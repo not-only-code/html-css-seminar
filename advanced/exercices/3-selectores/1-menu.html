@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+		<title>1. selectores de atributo</title>
+		<style>
+			body {
+				font: normal 16px/1.2em 'Helvetica', 'Arial', 'Sans-serif';
+				padding: 15px;
+			}
+			h1 {
+				font-size: 1.4em;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			/* _________________________________________________ */
+			/* escribe el código aquí */
+			li {
+				margin-bottom: 5px;
+			}
+			li.even:first-child {
+				color: red;
+			}
+			a {
+				color: green;
+				padding-left: 22px;
+				background: no-repeat;
+				text-decoration: none;
+			}
+			a[href$="pdf"] {
+				background-image: url('images/pdf.png');
+			}
+			a[href$="doc"] {
+				background-image: url('images/doc.png');
+			}
+			a[href$="jpg"] {
+				background-image: url('images/jpg.png');
+			}
+			a[href$="mp3"] {
+				background-image: url('images/mp3.png');
+			}
+			a[href$="mp4"] {
+				background-image: url('images/video.png');
+			}
+			/* escribe el código aquí */
+			/* _________________________________________________ */
+		</style>
+	</head>
+	<body>
+		<h1>1. selectores de atributo</h1>
+		<p>Como usar selectores de atributo cuando no podemos usar id, ni class</p>
+		<hr>
+		<ul>
+			<li class="odd"><a href="#.pdf" title="PDF Document">PDF Document</a></li>
+			<li class="even"><a href="#.doc" title="Word Document">Word Document</a></li>
+			<li class="odd"><a href="#.jpg" title="Image File">Image File</a></li>
+			<li class="even"><a href="#.mp3" title="Audio File">Audio File</a></li>
+			<li class="odd"><a href="#.mp4" title="Video File">Video File</a></li>
+		</ul>
+	</body>
+</html>

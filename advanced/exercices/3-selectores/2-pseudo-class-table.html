@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>2. pseudo-clases: maquetación de tablas</title>
+		<link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+		<style>
+			body {
+				font: normal 16px/1.2em 'Helvetica', 'Arial', 'Sans-serif';
+				padding: 15px;
+			}
+			h1 {
+				font-size: 1.4em;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			strong {
+				font-weight: bold;
+			}
+			table {
+				font-size: 0.9em;
+			}
+			/* _________________________________________________ */
+			/* escribe el código aquí */
+			
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+			td,
+			th {
+				padding: 10px;
+				border: solid 1px #ccc;
+			}
+
+			th {
+				text-align: left;
+				border-color: #333;
+				border-top: none;
+				border-bottom: none;
+				background: linear-gradient(#687587, #404853);
+				color: white;
+			}
+
+			th:first-child {
+				border-top-left-radius: 4px;
+  				border-left: 0;
+			}
+
+			th:last-child {
+				border-top-right-radius: 4px;
+  				border-right: 0;
+			}
+
+			tr:nth-child(even) td {
+				background-color: #e8eae9;
+			}
+
+			/* escribe el código aquí */
+			/* _________________________________________________ */
+			
+		</style>
+	</head>
+	<body>
+		<h1>2. pseudo-clases: maquetación de tablas</h1>
+		<p>Como maquetar tablas usando <strong>:first-child</strong>, <strong>:last-child</strong>, <strong>:nth-child(...)</strong></p>
+		<hr>
+		<table>
+			<thead>
+				<tr>
+					<th>Number</th>
+					<th>Player</th>
+					<th>Position</th>
+					<th>Height</th>
+					<th>Weight</th>
+					<th>Birthday</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>8</td>
+					<td>Marco Belinelli</td>
+					<td>G</td>
+					<td>6-5</td>
+					<td>195</td>
+					<td>03/25/1986</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Carlos Boozer</td>
+					<td>F</td>
+					<td>6-9</td>
+					<td>266</td>
+					<td>11/20/1981</td>
+				</tr>
+				<tr>
+					<td>21</td>
+					<td>Jimmy Butler</td>
+					<td>G-F</td>
+					<td>6-7</td>
+					<td>220</td>
+					<td>09/14/1989</td>
+				</tr>
+				<tr>
+					<td>22</td>
+					<td>Taj Gibson</td>
+					<td>F</td>
+					<td>6-9</td>
+					<td>225</td>
+					<td>06/24/1985</td>
+				</tr>
+				<tr>
+					<td>32</td>
+					<td>Richard Hamilton</td>
+					<td>G</td>
+					<td>6-7</td>
+					<td>193</td>
+					<td>02/14/1978</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Carlos Boozer</td>
+					<td>F</td>
+					<td>6-9</td>
+					<td>266</td>
+					<td>11/20/1981</td>
+				</tr>
+				<tr>
+					<td>21</td>
+					<td>Jimmy Butler</td>
+					<td>G-F</td>
+					<td>6-7</td>
+					<td>220</td>
+					<td>09/14/1989</td>
+				</tr>
+				<tr>
+					<td>22</td>
+					<td>Taj Gibson</td>
+					<td>F</td>
+					<td>6-9</td>
+					<td>225</td>
+					<td>06/24/1985</td>
+				</tr>
+				<tr>
+					<td>32</td>
+					<td>Richard Hamilton</td>
+					<td>G</td>
+					<td>6-7</td>
+					<td>193</td>
+					<td>02/14/1978</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
